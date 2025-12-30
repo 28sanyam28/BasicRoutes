@@ -1,0 +1,1 @@
+export type ScreenOneProps = NativeStackScreenProps<RouteStackList, "ScreenOne">
