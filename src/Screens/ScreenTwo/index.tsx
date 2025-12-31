@@ -1,12 +1,12 @@
 import { View } from "react-native";
 import styles from "./styles";
 import { ScreenTwoProps } from "./type";
-import { useSelector } from "react-redux";
-import { RootState } from "../../Redux/store";
+import { useAppDispatch, useAppSelector } from "../../Redux/store";
 import { useEffect } from "react";
 
 const ScreenTwo = ({ navigation }: ScreenTwoProps) => {
-    const { name } = useSelector((state: RootState) => state?.appSlice)
+    const dispatch = useAppDispatch();
+    const { name } = useAppSelector((state) => state.appSlice)
 
     useEffect(() => {
         console.log(name)
